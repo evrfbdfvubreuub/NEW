@@ -4,6 +4,7 @@ import { useAppState } from "@/state/store-context";
 import { buildTodayView, todaySummary } from "@/state/selectors";
 import { Icon, type IconName } from "@/components/primitives/Icon";
 import { GlobalMiniTimer } from "./GlobalMiniTimer";
+import { ReminderHost } from "./ReminderHost";
 
 interface NavItem {
   to: string;
@@ -104,6 +105,7 @@ export function AppShell(): JSX.Element {
       <ContextRail />
       <BottomNav />
       <GlobalMiniTimer variant="mobile" />
+      <ReminderHost />
     </div>
   );
 }
