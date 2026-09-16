@@ -10,6 +10,17 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 900,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          temporal: ["@js-temporal/polyfill"],
+          react: ["react", "react-dom", "react-router-dom"],
+        },
+      },
+    },
+  },
   test: {
     globals: true,
     environment: "jsdom",

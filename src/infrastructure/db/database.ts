@@ -1,6 +1,6 @@
 // Database opener + singleton connection (Blueprint §D, §F1). Coordinates
 // version upgrades so other tabs release their connection.
-import { openDB, type IDBPDatabase } from "idb";
+import { deleteDB, openDB, type IDBPDatabase } from "idb";
 import { DB_NAME, DB_VERSION, type ArchitectDB } from "./schema";
 import { runMigrations } from "./migrations";
 
@@ -52,6 +52,5 @@ export async function closeDb(): Promise<void> {
 /** Delete the entire database (used only by tests / hard reset fallback). */
 export async function deleteDatabase(): Promise<void> {
   await closeDb();
-  const { deleteDB } = await import("idb");
   await deleteDB(DB_NAME);
 }

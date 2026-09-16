@@ -36,6 +36,10 @@ export function useAppState(): AppState {
   return useSyncExternalStore(store.subscribe, store.getSnapshot, store.getSnapshot);
 }
 
+export function usePorts() {
+  return useStore().ports;
+}
+
 export interface Actions {
   createCommitment: (form: CommitmentFormInput) => ReturnType<typeof createCommitment>;
   startTimer: (recordId: string) => ReturnType<typeof startTimer>;

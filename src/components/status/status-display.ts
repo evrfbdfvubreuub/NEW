@@ -36,6 +36,11 @@ export function toneColor(tone: Tone): string {
   }
 }
 
+export function statusTone(status: DisplayStatus | null): Tone {
+  if (!status) return "active";
+  return STATUS_DISPLAY[status].tone;
+}
+
 /** Short calendar glyph for a status (accompanied by an accessible label). */
 export function statusGlyph(status: DisplayStatus): string {
   switch (status) {
