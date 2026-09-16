@@ -1,0 +1,62 @@
+/* Blueprint/engineering aesthetic (Blueprint §Q1, §Q4): subtle orthogonal grid
+   and fine 1px construction lines. Decoration must never reduce text contrast. */
+
+.blueprint-bg {
+  background-color: var(--canvas);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -1px -1px;
+}
+
+.blueprint-bg--deep {
+  background-color: var(--canvas-deep);
+}
+
+/* A framed panel with hairline border + small radius. */
+.panel {
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-panel);
+}
+
+.panel--raised {
+  background: var(--surface-raised);
+}
+
+.panel--flush {
+  box-shadow: none;
+}
+
+/* Optional architectural corner ticks framing a major panel. */
+.panel--ticks {
+  position: relative;
+}
+.panel--ticks::before,
+.panel--ticks::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: var(--border) solid var(--line-strong);
+  opacity: 0.7;
+}
+.panel--ticks::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.panel--ticks::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+.hairline {
+  border: none;
+  border-top: var(--border) solid var(--line);
+}

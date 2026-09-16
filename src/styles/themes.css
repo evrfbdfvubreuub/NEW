@@ -1,0 +1,67 @@
+/* Theme palettes (Blueprint §Q2). Dark is primary; warm ivory is the complete
+   alternative. Every status pairs colour with text + shape elsewhere. */
+
+:root,
+[data-theme="dark"] {
+  --canvas: #071319;
+  --canvas-deep: #041015;
+  --surface: #0b1b22;
+  --surface-raised: #10242c;
+  --surface-sunken: #061118;
+  --line: #29414b;
+  --line-strong: #47636e;
+  --text: #f0f2ee;
+  --text-muted: #8fa4ac;
+  --text-faint: #5f757e;
+  --grid: rgba(111, 169, 188, 0.08);
+  --grid-strong: rgba(111, 169, 188, 0.16);
+
+  --action: #39b7ee;
+  --action-ink: #04121a;
+  --done: #53d6a5;
+  --late: #f1b44c;
+  --partial: #f1b44c;
+  --missed: #ef6457;
+  --inactive: #6f8188;
+  --focus: #69ccf5;
+
+  --overlay: rgba(3, 10, 14, 0.66);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --canvas: #f2efe5;
+  --canvas-deep: #e9e5d7;
+  --surface: #faf7ed;
+  --surface-raised: #ffffff;
+  --surface-sunken: #efece0;
+  --line: #c3ccc4;
+  --line-strong: #788b8d;
+  --text: #14242a;
+  --text-muted: #566268;
+  --text-faint: #8a958f;
+  --grid: rgba(55, 107, 120, 0.1);
+  --grid-strong: rgba(55, 107, 120, 0.18);
+
+  --action: #1f8fc4;
+  --action-ink: #ffffff;
+  --done: #2fa87b;
+  --late: #c8852a;
+  --partial: #c8852a;
+  --missed: #cf4a3f;
+  --inactive: #8a9a9c;
+  --focus: #1f8fc4;
+
+  --overlay: rgba(30, 40, 44, 0.4);
+  color-scheme: light;
+}
+
+/* Status role helpers (used by badges, rings, bars). */
+:root {
+  --status-done: var(--done);
+  --status-late: var(--late);
+  --status-partial: var(--partial);
+  --status-missed: var(--missed);
+  --status-neutral: var(--inactive);
+  --status-active: var(--action);
+}

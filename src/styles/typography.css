@@ -1,0 +1,57 @@
+/* Typographic roles (Blueprint §Q3). Body is compact sans; labels are condensed
+   uppercase; the brand wordmark is a high-contrast serif. Paragraphs never all-caps. */
+
+.brand {
+  font-family: var(--font-brand);
+  text-transform: uppercase;
+  letter-spacing: var(--track-brand);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+}
+
+.label {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+}
+
+.eyebrow {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: var(--fs-2xs);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.page-title {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+}
+
+.section-title {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.faint {
+  color: var(--text-faint);
+}
